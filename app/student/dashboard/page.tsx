@@ -45,7 +45,7 @@ export default function StudentDashboard() {
   const [recentTrips, setRecentTrips] = useState<Ride[]>([])
   const [requestSent, setRequestSent] = useState(false)
   const [routes, setRoutes] = useState<RoutesResponse>({ routes: [], count: 0 })
-
+  const [routeId, setRouteId] = useState<number | null>(null)
   // Get token from localStorage
   const token = typeof window !== 'undefined' ? localStorage.getItem('token') : null
 
@@ -173,26 +173,39 @@ export default function StudentDashboard() {
   //   "count": 30
   // }
 
+  // const handleRideRequest = async () => {
+  //   if (!pickup || !destination) return
+
+  //   setIsSearching(true)
+
+  //   try {
+  //     // Get available drivers
+  //     const drivers = await api.getAvailableDrivers()
+  //     setAvailableDrivers(drivers)
+
+  //     // Calculate fare
+  //     const fareData = await api.calculateFare(pickup, destination)
+  //     setEstimatedFare(fareData)
+
+  //     setShowDrivers(true)
+  //   } catch (error) {
+  //     console.error("Error fetching drivers:", error)
+  //   } finally {
+  //     setIsSearching(false)
+  //   }
+  // }
+
   const handleRideRequest = async () => {
-    if (!pickup || !destination) return
-
-    setIsSearching(true)
-
-    try {
-      // Get available drivers
-      const drivers = await api.getAvailableDrivers()
-      setAvailableDrivers(drivers)
-
-      // Calculate fare
-      const fareData = await api.calculateFare(pickup, destination)
-      setEstimatedFare(fareData)
-
-      setShowDrivers(true)
-    } catch (error) {
-      console.error("Error fetching drivers:", error)
-    } finally {
-      setIsSearching(false)
-    }
+    const response = await fetch('http://10.19.88.241:3000/rides/request', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        routeId: routeId
+      })
+    })
   }
 
   const handleDriverSelect = async (driver: Driver) => {
@@ -335,6 +348,7 @@ export default function StudentDashboard() {
                     : 'border-gray-200 hover:border-gray-300'
                     }`}
                   onClick={() => {
+                    setRouteId(route.id)
                     setPickup(route.from_location)
                     setDestination(route.to_location)
                     setEstimatedFare({
