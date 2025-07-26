@@ -1,0 +1,253 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "Fahad",
+      "email": "fahad@gmail.com",
+      "studentId": "1904001",
+      "phone": "+880 1712345678",
+      "avatar": "/placeholder.svg?height=40&width=40",
+      "wallet": 150,
+      "totalRides": 12,
+      "totalSpent": 340,
+      "avgRating": 4.9
+    },
+    {
+      "id": "2",
+      "name": "Sarah Ahmed",
+      "email": "sarah.ahmed@student.cuet.ac.bd",
+      "studentId": "1904002",
+      "phone": "+880 1712345679",
+      "avatar": "/placeholder.svg?height=40&width=40",
+      "wallet": 200,
+      "totalRides": 8,
+      "totalSpent": 180,
+      "avgRating": 4.8
+    },
+    {
+      "name": "fahad kabir",
+      "email": "u2003143@student.cuet.ac.bd",
+      "studentId": "2003143",
+      "phone": "+8801537134759",
+      "avatar": "/placeholder.svg?height=40&width=40",
+      "id": "d9yhw5f0o",
+      "wallet": 0,
+      "totalRides": 0,
+      "totalSpent": 0,
+      "avgRating": 0
+    }
+  ],
+  "drivers": [
+    {
+      "id": "1",
+      "name": "Abdul Rahman",
+      "phone": "+880 1812345678",
+      "avatar": "/placeholder.svg?height=40&width=40",
+      "vehicleType": "Auto Rickshaw",
+      "vehicleNumber": "CUET-001",
+      "rating": 4.9,
+      "totalRides": 156,
+      "isOnline": true,
+      "currentLocation": {
+        "lat": 22.4596,
+        "lng": 91.9706,
+        "address": "Near Main Gate"
+      },
+      "earnings": {
+        "today": 450,
+        "thisMonth": 12450
+      }
+    },
+    {
+      "id": "2",
+      "name": "Karim Ahmed",
+      "phone": "+880 1812345679",
+      "avatar": "/placeholder.svg?height=40&width=40",
+      "vehicleType": "Auto Rickshaw",
+      "vehicleNumber": "CUET-002",
+      "rating": 4.8,
+      "totalRides": 142,
+      "isOnline": true,
+      "currentLocation": {
+        "lat": 22.4598,
+        "lng": 91.9708,
+        "address": "Near Library"
+      },
+      "earnings": {
+        "today": 380,
+        "thisMonth": 11200
+      }
+    },
+    {
+      "id": "3",
+      "name": "Nasir Uddin",
+      "phone": "+880 1812345680",
+      "avatar": "/placeholder.svg?height=40&width=40",
+      "vehicleType": "Auto Rickshaw",
+      "vehicleNumber": "CUET-003",
+      "rating": 4.9,
+      "totalRides": 138,
+      "isOnline": true,
+      "currentLocation": {
+        "lat": 22.46,
+        "lng": 91.971,
+        "address": "Near Cafeteria"
+      },
+      "earnings": {
+        "today": 320,
+        "thisMonth": 10980
+      }
+    },
+    {
+      "id": "4",
+      "name": "Mizanur Rahman",
+      "phone": "+880 1812345681",
+      "avatar": "/placeholder.svg?height=40&width=40",
+      "vehicleType": "Auto Rickshaw",
+      "vehicleNumber": "CUET-004",
+      "rating": 4.7,
+      "totalRides": 98,
+      "isOnline": true,
+      "currentLocation": {
+        "lat": 22.4602,
+        "lng": 91.9712,
+        "address": "Near CSE Building"
+      },
+      "earnings": {
+        "today": 280,
+        "thisMonth": 8500
+      }
+    },
+    {
+      "name": "mr kashem",
+      "phone": "+880 1537134759",
+      "avatar": "/placeholder.svg?height=40&width=40",
+      "vehicleType": "Auto Rickshaw",
+      "vehicleNumber": "QAN16ADg8x",
+      "id": "2af5hqnoj",
+      "rating": 0,
+      "totalRides": 0,
+      "isOnline": false,
+      "currentLocation": {
+        "lat": 22.4596,
+        "lng": 91.9706,
+        "address": "Near Main Gate"
+      },
+      "earnings": {
+        "today": 0,
+        "thisMonth": 0
+      }
+    },
+    {
+      "name": "mr  kashen",
+      "phone": "+880 1537134750",
+      "avatar": "/placeholder.svg?height=40&width=40",
+      "vehicleType": "Auto Rickshaw",
+      "vehicleNumber": "1234",
+      "id": "qvo1nssuu",
+      "rating": 0,
+      "totalRides": 0,
+      "isOnline": false,
+      "currentLocation": {
+        "lat": 22.4596,
+        "lng": 91.9706,
+        "address": "Near Main Gate"
+      },
+      "earnings": {
+        "today": 0,
+        "thisMonth": 0
+      }
+    }
+  ],
+  "rides": [
+    {
+      "id": "1",
+      "studentId": "1",
+      "driverId": "1",
+      "pickup": "Main Gate",
+      "destination": "Library",
+      "fare": 25,
+      "status": "completed",
+      "createdAt": "2024-01-15T10:30:00Z",
+      "completedAt": "2024-01-15T10:45:00Z",
+      "rating": 5,
+      "distance": "1.2 km"
+    },
+    {
+      "id": "2",
+      "studentId": "1",
+      "driverId": "2",
+      "pickup": "Cafeteria",
+      "destination": "CSE Building",
+      "fare": 15,
+      "status": "completed",
+      "createdAt": "2024-01-14T14:20:00Z",
+      "completedAt": "2024-01-14T14:30:00Z",
+      "rating": 4,
+      "distance": "0.8 km"
+    },
+    {
+      "id": "3",
+      "studentId": "1",
+      "driverId": "1",
+      "pickup": "Hostel",
+      "destination": "Academic Building",
+      "fare": 20,
+      "status": "completed",
+      "createdAt": "2024-01-13T09:15:00Z",
+      "completedAt": "2024-01-13T09:28:00Z",
+      "rating": 5,
+      "distance": "1.0 km"
+    }
+  ],
+  "locations": [
+    {
+      "id": "1",
+      "name": "Main Gate",
+      "coordinates": {
+        "lat": 22.4596,
+        "lng": 91.9706
+      }
+    },
+    {
+      "id": "2",
+      "name": "Library",
+      "coordinates": {
+        "lat": 22.4598,
+        "lng": 91.9708
+      }
+    },
+    {
+      "id": "3",
+      "name": "Cafeteria",
+      "coordinates": {
+        "lat": 22.46,
+        "lng": 91.971
+      }
+    },
+    {
+      "id": "4",
+      "name": "CSE Building",
+      "coordinates": {
+        "lat": 22.4602,
+        "lng": 91.9712
+      }
+    },
+    {
+      "id": "5",
+      "name": "Academic Building",
+      "coordinates": {
+        "lat": 22.4604,
+        "lng": 91.9714
+      }
+    },
+    {
+      "id": "6",
+      "name": "Hostel",
+      "coordinates": {
+        "lat": 22.4606,
+        "lng": 91.9716
+      }
+    }
+  ]
+}
